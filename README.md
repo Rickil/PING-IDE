@@ -1,7 +1,7 @@
 # MyIDE Project
 
 ## Overview
-MyIDE is an integrated development environment that provides a modern, feature-rich coding experience. It combines a Java backend with a JavaScript/HTML frontend to create a versatile IDE that supports multiple programming languages including Java, C++, and more.
+MyIDE is an integrated development environment that provides a modern, feature-rich coding experience. It combines a Java backend with a JavaScript/HTML frontend to create a versatile IDE that supports multiple programming languages including Java and C++.
 
 ## Project Structure
 The project consists of several key components:
