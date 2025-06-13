@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PING IDE</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body bgcolor="#eeeeee">
+
+    <div id="header" class="header"> PING IDE </div>
+    <div id='control-panel' class="control-panel">
+        <button class="btn" id="openProj" onclick='openDirectory("open")'> Open Project </button>
+        <button class="btn" id="saveFiles" onclick="saveFiles()" hidden> Save Files </button>
+        <button class="btn" onclick="openFileExplorer()" > Load configuration </button>
+        <button id="exec" class="btn" onclick="executeButton(false, true)" hidden > Execute </button>
+
+        <button id="anybtn" class="btn" onclick="anyButton(false, true)" hidden> Any </button>
+        <button id="anyCleanup" class="btn" onclick="Cleanup()" hidden> Cleanup </button>
+        <button id="anyDist" class="btn" onclick="Dist()" hidden> Dist </button>
+        <button id="anyReturn" class="btn" onclick="anyButton(true, false)" hidden> Return </button>
+
+        <button id="gitbtn" class="btn" onclick="gitButton(false, true)" hidden> Git </button>
+        <button id="gitPull" class="btn" onclick="Pull()" hidden> Pull </button>
+        <button id="gitAdd" class="btn" onclick='changeCmd("add")' hidden> Add </button>
+        <button id="gitCommit" class="btn" onclick='changeCmd("commit")' hidden> Commit </button>
+        <button id="gitPush" class="btn" onclick="Push()" hidden> Push </button>
+        <button id="gitReturn" class="btn" onclick="gitButton(true, false)" hidden> Return </button>
+
+        <button id="jvbtn" class="btn" onclick="javaButton(false, true)" hidden> Java </button>
+        <button id="mvnCompile" class="btn" onclick="mvnCompile()" hidden> Compile </button>
+        <button id="mvnClean" class="btn" onclick="mvnClean()" hidden> Clean </button>
+        <button id="mvnTest" class="btn" onclick="mvnTest()" hidden> Test </button>
+        <button id="mvnPackage" class="btn" onclick="mvnPackage()" hidden> Package </button>
+        <button id="mvnInstall" class="btn" onclick="mvnInstall()" hidden> Install </button>
+        <button id="mvnExec" class="btn" onclick='changeCmd("mvnExec")' hidden> Exec </button>
+        <button id="mvnTree" class="btn" onclick='changeCmd("mvnTree")' hidden> Tree </button>
+        <button id="javaReturn" class="btn" onclick="javaButton(true, false)" hidden> Return </button>
+
+        <button id="cppbtn" class="btn" onclick="cppButton(false, true)" hidden> C++ </button>
+        <button id="compile" class="btn" onclick='changeCmd("cppCompile")' hidden> Compile </button>
+        <button id="cppReturn" class="btn" onclick="cppButton(true, false)" hidden> Return </button>
+
+        <button id="return" class="btn" onclick="executeButton(true, false)" hidden> Return </button>
+
+        <input type="file" id="fileid" accept=".json" hidden onchange='onFileLoad(event)'/>
+
+        <select id="languages" class="languages" onchange="changeLanguage()">
+            <option value="none"> None </option>
+            <option value="cpp"> C++ </option>
+            <option value="java"> Java </option>
+        </select>
+        <input type="text" id="directoryid" size="10" maxlength="30" style="width: 300px;" placeholder="Enter your project path"/>
+        <button class="btn" id="directorybtn" onclick="onDirectoryLoad()"> Select </button>
+
+
+        <p id="currentFilePath" hidden></p>
+        <p id="fileRes" hidden></p>
+    </div>
+
+    <div id='editor-tabs' class="editor-tabs">
+    </div>
+
+    <div class="ideContainer">
+        <div class="editor" id="editor"></div>
+        <div>
+            <button class="alone" id="loadfile" onclick="loadFile()" hidden> Load File </button>
+            <div class="tree" id="tree"></div>
+        </div>
+    </div>
+
+    <div class="output" id="output"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/lib/ace.js"></script>
+    <script src="js/lib/theme-monokai.js"></script>
+    <script src="js/lib/ext-language_tools.js"></script>
+    <script>
+        var langTools = ace.require("ace/ext/language_tools");
+    </script>
+    <script src="js/ide.js"></script>
+
+</body>
+</html>

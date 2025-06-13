@@ -1,0 +1,151 @@
+*{margin: 0;}
+
+.header {
+    background: #a9a9a9;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    padding: 4px;
+    font-family: sans-serif;
+}
+
+.control-panel {
+    background: lightgray;
+    text-align: left;
+    padding: 4px;
+    font-family: sans-serif;
+}
+
+.editor-tabs {
+    background: #eeeeee;
+    text-align: left;
+    padding: 4px;
+    font-family: sans-serif;
+    resize: none;
+    overflow-y: scroll;
+}
+
+.editor { height: 600px; width: 80%; float: left;}
+
+.tree {
+    border: 1px;
+    border-color: white;
+    resize: none;
+    width: 20%;
+    height: 600px;
+    overflow-y: scroll;
+    float: left;
+    font-family: sans-serif;
+}
+
+.btn {
+    background: #acacac;
+    color: black;
+    padding: 8px;
+    border: 0;
+    transition-duration: 0s;
+}
+
+.alone{
+    width: 20%;
+}
+
+.navbar {
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
+.navbar li {
+    height: auto;
+    width: 135.8px;
+    float: left;
+    text-align: center;
+    list-style: none;
+    font: normal bold 13px/1em Arial, Verdana, Helvetica;
+    padding: 0;
+    margin: 0;
+    background-color: #a9a9a9;
+}
+
+.navbar a {
+    padding: 18px 0;
+    border-left: 1px solid #ccc9c9;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+#executenav:hover + .navbar a{
+    display: block;
+}
+
+.navbar li:hover,
+a:hover {
+    background-color: #444444;
+}
+
+/*.navbar li a {
+    display: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}*/
+
+.navbar li ul {
+    display: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+.navbar li:hover ul {
+    display: block;
+}
+.navbar li:hover a {
+    display: block;
+}
+.navbar li ul li {
+    background-color: #444444;
+}
+.navbar li ul li a {
+    border-left: 1px solid #444444;
+    border-right: 1px solid #444444;
+    border-top: 1px solid #c9d4d8;
+    border-bottom: 1px solid #444444;
+}
+.navbar li ul li a:hover {
+    background-color: #a3a1a1;
+}
+
+.btn:hover {
+    background: #686868;
+}
+
+
+.output {
+    padding: 4px;
+    border: 2px solid gray;
+    min-height: 230px;
+    max-height: 230px;
+    width: 100%;
+    resize: none;
+    overflow-y: scroll;
+    font-family: sans-serif;
+}
+
+input
+{
+    position: relative;
+    left: 4%;
+    margin: .4rem 0;
+    visibility: hidden;
+}
+
+#directorybtn
+{
+    position: relative;
+    left: 5%;
+    visibility: hidden;
+}
